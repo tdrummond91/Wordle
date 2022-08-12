@@ -100,7 +100,7 @@ class Wordle:
         print("You win!!!")
         return True
     
-    print("You Loose! Try again.")
+    print("You Lose! Try again.")
     return False
 
   
