@@ -105,6 +105,6 @@ class Wordle:
 
 #initialize game instance
 game = Wordle()
-print(game.wordleWord)
+#print(game.wordleWord)
 game.play()
 
