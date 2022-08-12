@@ -2,8 +2,10 @@
 from random import randint
 from termcolor import colored
 from typing import List
-
-
+import os
+absolutepath = os.path.abspath(__file__)
+absolutepath = absolutepath[:-10] + "\words\wordle_list.txt"
+print(absolutepath)
 
 class Wordle:
   wordleWord: str = ""
@@ -15,7 +17,7 @@ class Wordle:
   def __init__(self) -> None:
     winner:bool = False
     initList:List[str] = []
-    file = open(r'./words/wordle_list.txt', 'r')
+    file = open(absolutepath, 'r')
     for items in file:
       if len(items) == 6:
         initList.append(items[:-1])
@@ -64,7 +66,7 @@ class Wordle:
     if not len(word) == 5:
       return False
     try:
-      file = open(r'./words/wordle_list.txt', 'r')
+      file = open(absolutepath, 'r')
       for items in file:
         if items[:-1] == word:
           return True
