@@ -15,7 +15,7 @@ class Wordle:
   def __init__(self) -> None:
     winner:bool = False
     initList:List[str] = []
-    file = open(r'./learn-regular-expressions/english-words.txt', 'r')
+    file = open(r'./words/wordle_list.txt', 'r')
     for items in file:
       if len(items) == 6:
         initList.append(items[:-1])
@@ -64,7 +64,7 @@ class Wordle:
     if not len(word) == 5:
       return False
     try:
-      file = open(r'./learn-regular-expressions/english-words.txt', 'r')
+      file = open(r'./words/wordle_list.txt', 'r')
       for items in file:
         if items[:-1] == word:
           return True
