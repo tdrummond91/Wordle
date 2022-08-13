@@ -3,8 +3,11 @@ from random import randint
 from termcolor import colored
 from typing import List
 import os
+import colorama
+
+colorama.init()
 absolutepath = os.path.abspath(__file__)
-absolutepath = absolutepath[:-10] + "\words\wordle_list.txt"
+absolutepath = absolutepath[:-10] + "\\words\\wordle_list.txt"
 print(absolutepath)
 
 class Wordle:
